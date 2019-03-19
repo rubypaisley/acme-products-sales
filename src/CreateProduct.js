@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import { withRouter } from 'react-router-dom'
 
 class CreateProduct extends React.Component {
     constructor() {
@@ -25,6 +26,9 @@ class CreateProduct extends React.Component {
                     price: '',
                     discount: ''
                 })
+            })
+            .then(() => {
+                this.props.history.push('/products')
             })
 
     }
@@ -59,10 +63,10 @@ class CreateProduct extends React.Component {
                         </select>
                     </label>
                 </div>
-                <button className="btn btn-primary" type="submit">Create</button>
+                <button disabled={this.state.name.length === 0 || this.state.price.length === 0 ? true : false} className="btn btn-primary" type="submit">Create</button>
             </form>
         )
     }
 }
 
-export default CreateProduct
+export default withRouter(CreateProduct)
