@@ -4,7 +4,7 @@ const ProductListItem = ({ product, deleteProduct }) => {
     const discount = product.discount * .01 * product.price;
     const reducedPrice = product.price - discount;
     return (
-        <li key={product.id}>
+        <li key={product.id} className="list-group-item">
             {product.name} <br></br>
             <span style={{ textDecoration: product.price != reducedPrice ? 'line-through' : 'none' }}> {product.price}</span><br></br>
             {product.price !== reducedPrice && <div><span className='badge badge-success'>{reducedPrice}</span><br></br></div>}

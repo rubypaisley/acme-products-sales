@@ -36,10 +36,10 @@ class App extends Component {
             <div>
                 <h1>Acme Products/Sales</h1>
                 <Nav productCount={productCount} salesCount={salesCount} />
-                <Route exact path="/" />
+                <Route exact path="/" render={() => { return <h2>Welcome to the HomePage</h2> }} />
                 <Route exact path="/products" render={() => { return <Products products={products} deleteProduct={this.deleteProduct} /> }} />
                 <Route exact path="/products/sales" render={() => { return <Products products={sales} deleteProduct={this.deleteProduct} /> }} />
-                <Route exact path="/products/create" component={CreateProduct} />
+                <Route exact path="/products/create" render={() => { return <CreateProduct getData={this.getData} /> }} />
 
             </div>
 

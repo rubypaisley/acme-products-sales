@@ -3,7 +3,7 @@ import ProductListItem from './ProductListItem'
 
 const Products = ({ products, deleteProduct }) => {
     return (
-        <ul>
+        <ul className="list-group">
             {
                 products.map((product) => {
                     return (
