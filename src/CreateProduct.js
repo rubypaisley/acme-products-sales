@@ -37,31 +37,31 @@ class CreateProduct extends React.Component {
             <form onSubmit={this.handleSubmit}>
                 <div>
                     <label htmlFor="name">
-                        Name:
-               <input className="form-control" name="name" type="text" onChange={this.handleChange} value={this.state.name} />
-                    </label>
+                        Name:</label>
+                    <input className="form-control" name="name" type="text" onChange={this.handleChange} value={this.state.name} />
+
                 </div>
                 <div>
                     <label htmlFor="price">
-                        Price:
-               <input className="form-control" name="price" type="text" onChange={this.handleChange} value={this.state.price} />
-                    </label>
+                        Price:</label>
+                    <input className="form-control" name="price" type="text" onChange={this.handleChange} value={this.state.price} />
+
                 </div>
                 <div>
                     <label htmlFor="discount">
-                        Discount:
-               <input className="form-control" name="discount" type="text" onChange={this.handleChange} value={this.state.discount} />
-                    </label>
+                        Discount:</label>
+                    <input className="form-control" name="discount" type="text" onChange={this.handleChange} value={this.state.discount} />
+
                 </div>
                 <div>
                     <label htmlFor="availability">
-                        Availability:
-                        <select className="form-control" name="availability" onChange={this.handleChange}>
-                            <option>instock</option>
-                            <option>backordered</option>
-                            <option>discontinued</option>
-                        </select>
-                    </label>
+                        Availability:</label>
+                    <select className="form-control" name="availability" onChange={this.handleChange}>
+                        <option>instock</option>
+                        <option>backordered</option>
+                        <option>discontinued</option>
+                    </select>
+
                 </div>
                 <button disabled={this.state.name.length === 0 || this.state.price.length === 0 ? true : false} className="btn btn-primary" type="submit">Create</button>
             </form>
