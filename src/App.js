@@ -30,7 +30,7 @@ class App extends Component {
     render() {
         const products = this.state.products;
         const productCount = products.length;
-        const sales = products.filter(product => product.discount != 0 && product.availability == 'instock');
+        const sales = products.filter(product => product.discount != 0);
         const salesCount = sales.length;
         return (
             <div>
